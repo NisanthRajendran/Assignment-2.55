@@ -1,0 +1,36 @@
+1) What is cluster and what is hadoop cluster?
+        CLUSTER:
+               A computer cluster consists of many computers connected together to make a single system.
+               The cluster has nodes that perform same tasks.
+               This technology has emerged to increase cost effectiveness and to save time.
+               The nodes are connected through LAN.They provides much faster processing speed and larger storage capacity.
+               It has more advantages over Mainframe computers.
+         HADOOP CLUSTER:
+               This cluster stores very large amount of structured and unstructured data.
+               The Work load is distributed across multiple nodes or various commodity systems.
+               The data is processed in parallel.
+               When data is sent to a node for analysis,the data is also replicated to other cluster nodes.\
+               If a node fails,additional copies of the node's data exist elsewhere in the cluster,so the the data can still be analyzed.
+               It is a cost effective technique for top organizations that analyse huge amount of data.
+ 
+ 2) What is meant by a Rack and explain the rack arrangement in a hadoop cluster?
+    RACK:
+         It is the storage of nodes.It is the collection of 30 to 40 nodes that are connected to same network 
+         Collections of rack is a hadoop cluster.
+    RACK ARRANGEMENT:
+          *Usually 30 to 40 nodes are present in a rack.
+          *Communication  between two data nodes in the same rack is more efficient than the communication between two data nodes of 
+          different racks.
+          *Inorder to avoid network traffic while writing HDFS files,name node chooses data rack on the same rack  or the nearby rack
+          *When one rack fails,there is a possiblity of the data to be lost.so a replica of the data is made in another rack.no more than one replica is placed in one node
+           and no more than two replicas are placed in same rack.
+          *When a new Block is created,one replica is placed at local node,another at different rack and another at different node in local rack.
+          *For processing,nearby nodes are chosen,so that the speed is boosted up.
+          *Inorder to read or write data from two different racks,pipeline is used.Once the process is done,an acknowledgement is sent to name node indicating the completion of process.
+          *The data acquired is stored in HDFS.
+          
+          
+               
+               
+               
+        
